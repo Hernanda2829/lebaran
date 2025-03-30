@@ -1,11 +1,9 @@
-<!-- Halaman message.html -->
 <!DOCTYPE html>
 <html lang="id">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Ucapan Idul Fitri</title>
     <style>
         body {
@@ -13,77 +11,70 @@
             text-align: center;
             background-color: #f4f4f4;
             color: #05552b;
-            padding: 50px;
+            padding: 20px;
         }
+        .background-masjid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60%;
+            height: 100%;
+            background: url('./masjid.png') no-repeat center center;
+            background-size: cover;
+            opacity: 0.050;
+            
+        }
+
         .message-container {
-            background: #c3f1bc;
+            background: #b4f3d4;
             padding: 0px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             display: flex;
-            max-width: 800px;
+            flex-direction: column;
+            max-width: 90%;
             margin: auto;
-            text-align: left;
-            height: 400px;
+            text-align: center;
+            position: relative;
             animation: fadeIn 1.5s ease-in-out;
         }
+
         .text-content {
-            flex: 1;
             padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            position: relative;
-            
-        }
-        .image-content {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            animation: slideDown 1s ease-in-out;
-        }
-        .image-content img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-        .decorative-top {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 500px;
-            height: 240px;
-            background: url('masjid.png') bottom left no-repeat;
-            background-size: contain;
-            opacity: 0.19;
-        }
-        .minal {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 44px;
-            color: #05552b;
-            font-weight: bold;
-        }
-        .mohon{
-            position: absolute;
-            top: 130px;
-            left: 20px;
-            font-size: 14px;
-            color: #05552b;
-            font-weight: bold;
+            font-family: 'TT Hoves', sans-serif;
         }
 
-        .syawal {
-            position: absolute;
-            bottom: 10px;
-            left: 20px;
-            font-size: 14px;
-            color: #05552b;
+        .text-content h1 {
+            font-size: 56px;
             font-weight: bold;
+            color: #05552b;
+            animation: slideDown 1s ease-in-out;
         }
+
+        .text-content p {
+            font-size: 16px;
+            font-family: 'TT Interphases', sans-serif;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .image-content {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            margin-top: 0px;
+            width: 50%;
+            height: 100%;
+        }
+
+        .image-content img {
+            width: 100%;
+            max-width: 400px;
+            height: 100%;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
         .music-icon {
             position: fixed;
             bottom: 10px;
@@ -91,120 +82,142 @@
             cursor: pointer;
             transition: transform 0.3s ease-in-out;
         }
+
         .music-icon:hover {
             transform: scale(1.2);
         }
+
         .message-container-2 {
-    background: #e8f5e9; /* Warna latar belakang hijau muda */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 800px;
-    margin: 20px auto;
-    text-align: left;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    animation: fadeIn 1.5s ease-in-out;
-}
-.message-container-2 h1 {
-    flex: 1;
-    flex-direction: column;
-    text-align: center;
-    font-size: 36px; /* Ukuran font lebih kecil */
-    font-weight: bold;
-    color: #05552b;
-    margin-bottom: 20px; /* Jarak antara judul dan teks */
-    animation: slideLeft 1s ease-in-out;
-}
-.message-container-2 .text {
-    font-size: 16px; /* Ukuran font teks lebih kecil */
-    text-align: justify;
-    font-family: 'TT Interphases', sans-serif;
-    color: #05552b;
-    line-height: 1.6; /* Jarak antar baris teks */
-    animation: fadeIn 2s ease-in-out;
-}
-.message-container-2 .flower-top {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 200px;
-    opacity: 0.8; /* Sedikit transparan */
-}
-.message-container-2 .flower-bottom-left {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    width: 200px;
-    opacity: 0.8; /* Sedikit transparan */
-}
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 90%;
+            flex-direction: column;
+            margin: 20px auto;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .message-container-2 h1 {
+            font-size: 30px;
+            font-weight: bold;
+            color: #05552b;
+            animation: slideLeft 1s ease-in-out;
+        }
+
+        .message-container-2 .text {
+            font-size: 16px;
+            font-family: 'TT Interphases', sans-serif;
+            color: #05552b;
+            animation: fadeIn 2s ease-in-out;
+            text-align: justify;
+        }
+
+        .message-container-2 .flower-top,
+        .message-container-2 .flower-bottom-left {
+            width: 200px;
+            position: relative;
+            animation: fadeIn 2s ease-in-out;
+        }
+
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
+
         @keyframes slideDown {
-            from { transform: translateY(-20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
+
         @keyframes slideLeft {
-            from { transform: translateX(-20px); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
+            from {
+                transform: translateX(-20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .message-container {
+                flex-direction: row;
+                text-align: left;
+            }
+
+            .text-content {
+                flex: 1;
+            }
+
+            .image-content {
+                flex: 1;
+            }
+
+            .message-container-2 .text {
+                text-align: center;
+            }
         }
     </style>
+</head>
+
+<body>
+    <audio id="background-music" autoplay loop>
+        <source src="./music_lebaran.mp3" type="audio/mpeg">
+    </audio>
+    <div class="message-container">
+        <div class="text-content">
+            <div class="background-masjid"></div>
+            <h1>MINAL AIDIN WAL FAIZIN</h1>
+            <p>Mohon Maaf Lahir dan Batin</p>
+            <p class="syawal">1 Syawal 1446 Hijriah</p>
+        </div>
+        <div class="image-content">
+            <img src="imagelebaran.png" alt="Ucapan Lebaran">
+        </div>
+        <img class="music-icon" id="music-icon" src="icons8-play-50.png" alt="Music" onclick="toggleMusic()">
+    </div>
+
+    <div class="message-container-2">
+        <h1>Taqabbalallahu minna wa minkum taqabbal ya karim</h1>
+        <img class="flower-top" src="bunga1.png" alt="Bunga">
+        <p class="text">Semoga di hari yang fitri ini, segala dosa diampuni, hati menjadi suci, dan kebahagiaan selalu
+            menyertai.<br>
+            Harapan terbaik untukmu: semoga kesehatan, keberkahan, dan kebahagiaan senantiasa melimpah dalam
+            hidupmu.<br>
+            Doa terbaikku untukmu: Semoga segala impian dan harapanmu tercapai, serta diberikan umur panjang dan rezeki
+            yang melimpah.</p>
+        <img class="flower-bottom-left" src="bunga2.png" alt="Bunga">
+    </div>
+
     <script>
-        function moveButton() {
-            let button = document.getElementById("noButton");
-            let x = Math.random() * (window.innerWidth - 100);
-            let y = Math.random() * (window.innerHeight - 50);
-            button.style.left = x + "px";
-            button.style.top = y + "px";
-        }
-        function goToMessagePage() {
-            window.location.href = "message.html";
-        }
         function toggleMusic() {
-            let audio = document.getElementById("lebaranSong");
-            let icon = document.getElementById("musicIcon");
-            if (audio.paused) {
-                audio.play();
-                icon.src = "./icons8-play-50.png";
-                icon.alt = "Pause Music";
-            } else {
-                audio.pause();
+            var music = document.getElementById("background-music");
+            var icon = document.getElementById("music-icon");
+            if (music.paused) {
+                music.play();
                 icon.src = "./icons8-pause-50.png";
-                icon.alt = "Play Music";
+            } else {
+                music.pause();
+                icon.src = "./icons8-play-50.png";
             }
         }
     </script>
-    </head>
-    
-    <body>
-        <div class="message-container">
-            
-            <div class="text-content">
-                <div class="decorative-top"></div>
-                <h1 class="minal">MINAL AIDIN WAL FAIZIN</h1>
-                <p class="mohon">Mohon Maaf Lahir dan Batin</p>
-                <p class="syawal">1 Syawal 1446 Hijriah</p>
-            </div>          
-           <div class="image-content">
-                <img src="./imagelebaran.png" alt="Ucapan Lebaran">
-            </div>
-            <audio id="lebaranSong" src="music_lebaran.mp3"></audio>
-            <img id="musicIcon" src="https://cdn-icons-png.flaticon.com/512/727/727232.png" class="music-icon"
-                onclick="toggleMusic()" width="40" alt="Play Music"></div>
-        
-        <div class="message-container-2">
-            <h1>Taqabbalallahu minna wa minkum taqabbal ya karim</h1>
-            <img class="flower-top" src="bunga2.png" alt="Bunga">
-            <p class="text">Semoga di hari yang fitri ini, segala dosa diampuni, hati menjadi suci, dan kebahagiaan selalu
-                menyertai.<br>
-                Harapan terbaik untukmu: semoga kesehatan, keberkahan, dan kebahagiaan senantiasa melimpah dalam hidupmu.<br>
-                Doa terbaikku untukmu: Semoga segala impian dan harapanmu tercapai, serta diberikan umur panjang dan rezeki yang
-                melimpah.</p>
-            <img class="flower-bottom-left" src="bunga1.png" alt="Bunga">
-        </div>
-    </body>
-    
-    </html>
+</body>
+
+</html>
